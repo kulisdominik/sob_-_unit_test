@@ -2,17 +2,10 @@ import java.util.StringTokenizer;
 
 public class ONP
 {
-    public String _value;
-
-    public ONP(String value)
-    {
-        _value = value;
-    }
-
-    public String getParseValue()
+    public static String getParseValue(String in_value) throws StackEmptyException
     {
         Stack stack = new Stack();
-        StringTokenizer value_tokens = new StringTokenizer(_value, "+-*/() ", true);
+        StringTokenizer value_tokens = new StringTokenizer(in_value, "+-*/() ", true);
 
         String out_value = "";
         while(value_tokens.hasMoreTokens())

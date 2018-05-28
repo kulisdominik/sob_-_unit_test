@@ -17,14 +17,20 @@ public class Stack {
         ++_size;
     }
 
-    public String top()
+    public String top() throws StackEmptyException
     {
-        return _contener.get(_size - 1);
+        if(!isEmpty())
+            return _contener.get(_size - 1);
+
+        throw new StackEmptyException("Error: top() ");
     }
 
-    public String pop()
+    public String pop() throws StackEmptyException
     {
-       return _contener.remove(--_size);
+        if(!isEmpty())
+            return _contener.remove(--_size);
+
+        throw new StackEmptyException("Error: pop() ");
     }
 
     public void show()
@@ -36,6 +42,7 @@ public class Stack {
     {
         return _size > 0 ? false : true;
     }
+
     @Override
     public String toString() {
         return "Stack{" +

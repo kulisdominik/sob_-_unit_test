@@ -1,15 +1,14 @@
 public class Main {
     public static void main(String [] args)
     {
-        // Jakies inne przyklady trzeba dodac bo te sa kradzione :)
+        try
         {
-            ONP onp = new ONP("(4+2)*     (3-1)=");
-            System.out.println(onp.getParseValue());
+            System.out.println(ONP.getParseValue("(4+2)*(3-1)="));
+            System.out.println(ONP.getParseValue("(1+2)*3="));
         }
+        catch (Exception e)
         {
-            ONP onp = new ONP("(1+2)*3=");
-            System.out.println(onp.getParseValue());
+            System.out.println(e);
         }
-
     }
 }
