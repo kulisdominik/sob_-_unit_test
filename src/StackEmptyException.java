@@ -4,7 +4,7 @@ public class StackEmptyException extends  Exception{
 
     public StackEmptyException(String message)
     {
-        System.out.println(message);
+        System.out.println("Exception. Method: " + message);
     }
 
     @Override

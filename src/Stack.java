@@ -22,7 +22,7 @@ public class Stack {
         if(!isEmpty())
             return _contener.get(_size - 1);
 
-        throw new StackEmptyException("Error: top() ");
+        throw new StackEmptyException("top() ");
     }
 
     public String pop() throws StackEmptyException
@@ -30,7 +30,7 @@ public class Stack {
         if(!isEmpty())
             return _contener.remove(--_size);
 
-        throw new StackEmptyException("Error: pop() ");
+        throw new StackEmptyException("pop() ");
     }
 
     public void show()
